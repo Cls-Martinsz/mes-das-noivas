@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mês das Noivas - Celebre o Amor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        .heart-beat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        #menu {
+            position: relative;
+        }
+
+        #underline {
+            width: 0;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            background-color: #db2777; /* pink-700 */
+            position: absolute;
+            transition: left 0.3s ease, width 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans bg-pink-50">
+    <!-- Header/Navigation -->
+   <header class="bg-white shadow-md sticky top-0 z-50"> 
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+            <i class="fas fa-heart text-pink-500 text-4xl heart-beat"></i>
+            <h1 class="text-2xl font-bold text-pink-700">Mês das Noivas</h1>
+      </div>
+        <nav id="menu" class="hidden md:flex space-x-8 relative">
+            <a href="#" class="menu-item text-pink-700 font-semibold pb-1">Home</a>
+            <a href="#formatura" class="menu-item text-gray-600 hover:text-pink-700 transition-all pb-1">Formatura</a>
+            <a href="#namorados" class="menu-item text-gray-600 hover:text-pink-700 transition-all pb-1">Dia dos Namorados</a>
+            <a href="#inspiracoes" class="menu-item text-gray-600 hover:text-pink-700 transition-all pb-1">Inspirações</a>
+            <a href="#contato" class="menu-item text-gray-600 hover:text-pink-700 transition-all pb-1">Contato</a>
+
+            <!-- Barra animada -->
+            <div id="underline" class="absolute bottom-0 h-0.5 bg-pink-700 transition-all duration-300"></div>
+        </nav>
+
+        <button id="menu-btn" class="md:hidden text-pink-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+  </div>
+
+  <!-- Menu Mobile -->
+  <nav id="mobile-menu" class="md:hidden max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out bg-white shadow-md">
+    <a href="#" class="block px-6 py-3 text-pink-700 font-semibold border-b border-gray-200">Home</a>
+    <a href="#formatura" class="block px-6 py-3 text-gray-600 hover:text-pink-700 transition-all border-b border-gray-200">Formatura</a>
+    <a href="#namorados" class="block px-6 py-3 text-gray-600 hover:text-pink-700 transition-all border-b border-gray-200">Dia dos Namorados</a>
+    <a href="#inspiracoes" class="block px-6 py-3 text-gray-600 hover:text-pink-700 transition-all border-b border-gray-200">Inspirações</a>
+    <a href="#contato" class="block px-6 py-3 text-gray-600 hover:text-pink-700 transition-all">Contato</a>
+  </nav>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-pink-800 mb-6">Celebre o Mês das Noivas</h1>
+                <p class="text-lg text-pink-900 mb-8">O mês mais romântico do ano chegou! Encontre inspiração, dicas e ideias para tornar seu casamento inesquecável.</p>
+                <div class="flex space-x-4">
+                    <a href="#inspiracoes" class="bg-pink-700 hover:bg-pink-800 text-white px-6 py-3 rounded-full font-medium transition-all">Inspirações</a>
+                    <a href="#contato" class="border-2 border-pink-700 text-pink-700 hover:bg-pink-100 px-6 py-3 rounded-full font-medium transition-all">Fale Conosco</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Casal feliz" class="rounded-lg shadow-xl w-full max-w-md">
+                    <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-full shadow-lg">
+                        <i class="fas fa-heart text-pink-500 text-4xl heart-beat"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-pink-800 mb-12">Tudo para seu Casamento Perfeito</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-pink-50 p-8 rounded-xl text-center card-hover transition-all">
+                    <div class="bg-pink-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-ring text-pink-700 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-pink-800 mb-3">Alianças</h3>
+                    <p class="text-gray-600">Encontre o par perfeito de alianças que simbolizam seu amor eterno.</p>
+                </div>
+                <div class="bg-pink-50 p-8 rounded-xl text-center card-hover transition-all">
+                    <div class="bg-pink-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-camera-retro text-pink-700 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-pink-800 mb-3">Fotografia</h3>
+                    <p class="text-gray-600">Registre cada momento especial com nossos fotógrafos profissionais.</p>
+                </div>
+                <div class="bg-pink-50 p-8 rounded-xl text-center card-hover transition-all">
+                    <div class="bg-pink-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-utensils text-pink-700 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-pink-800 mb-3">Buffet</h3>
+                    <p class="text-gray-600">Cardápios sofisticados para impressionar seus convidados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Pages Section -->
+    <section class="py-16 bg-pink-50" id="other-pages">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-pink-800 mb-12">Explore Nossas Outras Celebrações</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Formatura Page -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all" id="formatura">
+                    <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Formatura" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-pink-800 mb-3">Formatura</h3>
+                        <p class="text-gray-600 mb-4">Celebre essa conquista importante com estilo e elegância. Veja nossas dicas para tornar sua festa de formatura inesquecível.</p>
+                        <a href="formatura.html" class="inline-block bg-pink-700 hover:bg-pink-800 text-white px-6 py-2 rounded-full font-medium transition-all">Saiba Mais</a>
+                    </div>
+                </div>
+                
+                <!-- Dia dos Namorados Page -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all" id="namorados">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Dia dos Namorados" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-pink-800 mb-3">Dia dos Namorados</h3>
+                        <p class="text-gray-600 mb-4">Ideias românticas, presentes especiais e experiências para celebrar o amor no dia mais romântico do ano.</p>
+                        <a href="namorados.html" class="inline-block bg-pink-700 hover:bg-pink-800 text-white px-6 py-2 rounded-full font-medium transition-all">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-white" id="inspiracoes">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-pink-800 mb-12">Inspirações para Seu Casamento</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Decoração de casamento" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Buquê de noiva" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+                    <img src="images (1).jpeg" alt="Bolo de casamento" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Casal feliz" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block border-2 border-pink-700 text-pink-700 hover:bg-pink-100 px-6 py-3 rounded-full font-medium transition-all">Ver Mais Inspirações</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-pink-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-pink-800 mb-12">O Que Dizem Nossos Clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"O Mês das Noivas nos ajudou a planejar cada detalhe do nosso casamento. Foi tudo perfeito!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Carolina" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-pink-800">Ana Carolina</h4>
+                            <p class="text-gray-500 text-sm">Noiva, Junho 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"As dicas para o Dia dos Namorados foram incríveis! Fizemos um jantar inesquecível."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ricardo" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-pink-800">Ricardo</h4>
+                            <p class="text-gray-500 text-sm">Noivo, Junho 2023</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Minha festa de formatura foi um sucesso graças às ideias criativas que encontrei aqui."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Juliana" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-semibold text-pink-800">Juliana</h4>
+                            <p class="text-gray-500 text-sm">Formanda, Dezembro 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white" id="contato">
+        <div class="container mx-auto px-6">
+            <div class="bg-pink-50 rounded-xl p-8 md:p-12 shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-3xl font-bold text-pink-800 mb-6">Entre em Contato</h2>
+                        <p class="text-gray-600 mb-8">Tem dúvidas ou precisa de ajuda para planejar seu evento especial? Nossa equipe está pronta para te ajudar!</p>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-pink-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-pink-800">Endereço</h4>
+                                    <p class="text-gray-600">Av. das Noivas, 123 - Centro</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-pink-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-pink-800">Telefone</h4>
+                                    <p class="text-gray-600">(11) 98765-4321</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-pink-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-pink-800">Email</h4>
+                                    <p class="text-gray-600">contato@mesdasnoivas.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Seu Nome</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 outline-none transition-all">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 outline-none transition-all">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 outline-none transition-all">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 outline-none transition-all"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-pink-700 hover:bg-pink-800 text-white px-6 py-3 rounded-lg font-medium transition-all">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-pink-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Receba Nossas Novidades</h2>
+            <p class="text-pink-200 mb-8 max-w-2xl mx-auto">Inscreva-se para receber dicas exclusivas, promoções e inspirações para seu casamento e outras celebrações especiais.</p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Seu melhor email" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-800">
+                <button class="bg-pink-600 hover:bg-pink-700 px-6 py-3 rounded-r-lg font-medium transition-all">Inscrever</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-heart text-pink-400 text-3xl mr-2"></i>
+                        <h3 class="text-2xl font-bold">Mês das Noivas</h3>
+                    </div>
+                    <p class="text-pink-200">Tornando cada celebração especial e inesquecível desde 2025.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-pink-300 hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-pink-300 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-pink-300 hover:text-white text-xl"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-pink-200 hover:text-white transition-all">Home</a></li>
+                        <li><a href="#formatura" class="text-pink-200 hover:text-white transition-all">Formatura</a></li>
+                        <li><a href="#namorados" class="text-pink-200 hover:text-white transition-all">Dia dos Namorados</a></li>
+                        <li><a href="#inspiracoes" class="text-pink-200 hover:text-white transition-all">Inspirações</a></li>
+                        <li><a href="#contato" class="text-pink-200 hover:text-white transition-all">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Serviços</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-pink-200 hover:text-white transition-all">Planejamento de Casamento</a></li>
+                        <li><a href="#" class="text-pink-200 hover:text-white transition-all">Locação de Espaços</a></li>
+                        <li><a href="#" class="text-pink-200 hover:text-white transition-all">Buffet</a></li>
+                        <li><a href="#" class="text-pink-200 hover:text-white transition-all">Fotografia</a></li>
+                        <li><a href="#" class="text-pink-200 hover:text-white transition-all">Decoração</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <address class="not-italic text-pink-200">
+                        <p class="mb-2">Av. das Noivas, 123 - Centro</p>
+                        <p class="mb-2">São Paulo - SP</p>
+                        <p class="mb-2">CEP: 01234-567</p>
+                        <p class="mb-2">Tel: (11) 98765-4321</p>
+                        <p>Email: contato@mesdasnoivas.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-pink-800 mt-12 pt-8 text-center text-pink-300">
+                <p>&copy; 2025 Mês das Noivas. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Placeholder pages for navigation -->
+    <script>
+        // These would be separate HTML files in a real implementation
+        document.querySelector('a[href="formatura.html"]').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            
+            // Create a modal with graduation content
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
+            modal.innerHTML = `
+                <div class="bg-white rounded-xl max-w-2xl w-full p-8 max-h-[90vh] overflow-y-auto">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-pink-800">Formatura</h2>
+                        <button onclick="this.parentElement.parentElement.parentElement.remove()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-2xl"></i>
+                        </button>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Formatura" class="w-full h-64 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold text-pink-700 mb-4">Celebre Sua Conquista com Estilo</h3>
+                    <p class="text-gray-600 mb-4">A formatura é um marco importante na vida de qualquer pessoa. Depois de anos de dedicação e esforço, você merece uma celebração à altura dessa conquista.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                        <div class="bg-pink-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-pink-800 mb-2"><i class="fas fa-graduation-cap mr-2"></i>Dicas para a Cerimônia</h4>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                <li>Chegue com antecedência</li>
+                                <li>Prepare seu discurso</li>
+                                <li>Combine com os colegas para fotos</li>
+                            </ul>
+                        </div>
+                        <div class="bg-pink-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-pink-800 mb-2"><i class="fas fa-glass-cheers mr-2"></i>Ideias para a Festa</h4>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                <li>Tema criativo para a decoração</li>
+                                <li>Playlist com músicas marcantes</li>
+                                <li>Fotos e vídeos profissionais</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button onclick="this.parentElement.parentElement.remove()" class="mt-4 bg-pink-700 hover:bg-pink-800 text-white px-6 py-2 rounded-full font-medium transition-all">Fechar</button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        });
+
+        document.querySelector('a[href="namorados.html"]').addEventListener('click', function(e) {
+            e.preventDefault();            
+            // Create a modal with Valentine's Day content
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
+            modal.innerHTML = `
+                <div class="bg-white rounded-xl max-w-2xl w-full p-8 max-h-[90vh] overflow-y-auto">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold text-pink-800">Dia dos Namorados</h2>
+                        <button onclick="this.parentElement.parentElement.parentElement.remove()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-2xl"></i>
+                        </button>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Dia dos Namorados" class="w-full h-64 object-cover rounded-lg mb-6">
+                    <h3 class="text-xl font-semibold text-pink-700 mb-4">Celebre o Amor no Dia dos Namorados</h3>
+                    <p class="text-gray-600 mb-4">O Dia dos Namorados é a oportunidade perfeita para demonstrar todo seu amor e carinho por quem é especial em sua vida. Veja nossas ideias para tornar essa data inesquecível.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+                        <div class="bg-pink-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-pink-800 mb-2"><i class="fas fa-gift mr-2"></i>Presentes Criativos</h4>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                <li>Experiências em vez de objetos</li>
+                                <li>Presentes personalizados</li>
+                                <li>Cestas temáticas</li>
+                            </ul>
+                        </div>
+                        <div class="bg-pink-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-pink-800 mb-2"><i class="fas fa-heart mr-2"></i>Programações Românticas</h4>
+                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                <li>Jantar à luz de velas</li>
+                                <li>Piquenique no parque</li>
+                                <li>Noite de filmes românticos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button onclick="this.parentElement.parentElement.remove()" class="mt-4 bg-pink-700 hover:bg-pink-800 text-white px-6 py-2 rounded-full font-medium transition-all">Fechar</button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        });
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+        if (menu.style.maxHeight) {
+            menu.style.maxHeight = null; // fecha o menu
+        } else {
+            menu.style.maxHeight = menu.scrollHeight + "px"; // abre o menu animado
+        }
+        });
+        
+        </script>
+</body>
+</html>
